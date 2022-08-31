@@ -22,7 +22,7 @@
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
-	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/main.css">
 
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=8dd75011-3ae0-45f2-a483-3b6088b5a519&lang=ru_RU" type="text/javascript"></script>
 
@@ -78,7 +78,7 @@
 
 						<div class="header-callback">
 							<a href="#" class="btn btn-black whatsapp-callback">Написать в WatsApp</a>
-							<a href="#" class="btn btn-border phone-callback">Заказать звонок</a>
+							<a href="#callback" class="btn btn-border phone-callback open-popup">Заказать звонок</a>
 						</div>
 					</div>
 
@@ -532,6 +532,58 @@
 		</div>
 
 	</section>
+
+	<footer class="footer">
+		<div class="footer-top">
+			<div class="container">
+				<nav class="footer-menu">
+					<a href="#">Главная</a>
+					<a href="#">О компании</a>
+					<a href="#">Этапы строительства</a>
+					<a href="#">Расчет стоимости</a>
+					<a href="#">Контакты</a>
+				</nav>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				<div class="footer-row">
+					<div class="footer-left">
+						©Domov 2020
+					</div>
+					<div class="footer-right">
+						Сайт разработан в <a href="#">BIK.Agency</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="popup-wrapper" id="callback">
+		<div class="popup-flex">
+			<div class="popup-block">
+				<div class="popup-close">
+					<span class="icon-close"></span>
+				</div>
+				<div class="popup-content">
+					<div class="h3">Заказать звонок</div>
+					<p>Оставьте заявку и мы свяжемся с Вами в ближайшее время!</p>
+					<form class="callback-form">
+						<div class="form-group">
+							<input type="text" class="form-control is-invalid" placeholder="Ваше имя">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control phone-mask" placeholder="Ваш телефон">
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-black">Заказать звонок</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="popup-bg"></div>
+		</div>
+	</div>
 
 	<script src="js/scripts.min.js"></script>
 

@@ -146,6 +146,68 @@ $(function() {
   	$('.header-nav').removeClass('opened')
   });
 
-  
+  $('.open-popup').on('click', function(e) {
+  	e.preventDefault();
+  	let id = $(this).attr('href');
+  	$(id).show();
+  	setTimeout(() => {
+  		$(id).addClass('opened')
+  	}, 50);
+  });
+
+  function closePopup() {
+  	$('.popup-wrapper').removeClass('opened');
+  	setTimeout(() => {
+  		$('.popup-wrapper').hide()
+  	}, 400)
+  }
+
+  $('.popup-bg').on('click', closePopup);
+  $('.popup-close').on('click', closePopup);
+
+  $('.send-app-slider').owlCarousel({
+  	items: 1,
+  	nav: false,
+  	dots: false,
+  	margin: 10,
+  	loop: true
+  });
+
+  $('.send-site-next-slide').on('click', function() {
+  	$('.send-app-slider').trigger('next.owl.carousel')
+  });
+
+  $('.scroll-to').on('click', function(e) {
+  	e.preventDefault();
+  	let id = $(this).attr('href');
+  	$('html, body').animate({
+  		scrollTop: $(id).offset().top
+  	}, 1000)
+  });
+
+  let projectSlider = $('.project-images-popup-slider');
+
+  projectSlider.owlCarousel({
+  	items: 1,
+  	dots: true,
+  	nav: true,
+  	margin: 10
+  })
+
+  $('.category-item-link').on('click', function() {
+  	let parent = $(this).parents('.category-item'),
+  			slides = parent.find('.category-item-popup-images img');
+  	projectSlider.find('.owl-item').each(function(i) {
+			projectSlider.trigger('remove.owl.carousel', i)
+		});
+  	slides.each(function() {
+			projectSlider.trigger('add.owl.carousel', $(this).clone())
+		});
+  });
+
+  $('.phone-mask').inputmask({
+		mask: "+7 999 999-99-99",
+		showMaskOnHover: false
+	});
 
 });

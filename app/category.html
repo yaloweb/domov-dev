@@ -22,7 +22,9 @@
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
-	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=8dd75011-3ae0-45f2-a483-3b6088b5a519&lang=ru_RU" type="text/javascript"></script>
 
 </head>
 
@@ -76,7 +78,7 @@
 
 						<div class="header-callback">
 							<a href="#" class="btn btn-black whatsapp-callback">Написать в WatsApp</a>
-							<a href="#" class="btn btn-border phone-callback">Заказать звонок</a>
+							<a href="#callback" class="btn btn-border phone-callback open-popup">Заказать звонок</a>
 						</div>
 					</div>
 
@@ -110,14 +112,26 @@
 			
 			<div class="second-banner-left">
 				<div class="h1">Деревянные дома</div>
-				<div class="send-app-item">
-					<a href="#" class="send-app-item-link"></a>
-					<div class="h3">Скидка от <span>3%</span> за двойной заказ</div>
-					<p>При заказе двух проектов единовременно<br>(дом и баня/баня и беседка) — действует скидка от 3%.</p>
+				<div class="send-app-slider owl-carousel">
+					<div class="send-app-item">
+						<div class="h3">Скидка от <span>3%</span> за двойной заказ</div>
+						<p>При заказе двух проектов единовременно<br>(дом и баня/баня и беседка) — действует скидка от 3%.</p>
+						<div class="send-site-next-slide"></div>
+					</div>
+					<div class="send-app-item">
+						<div class="h3">Скидка от <span>3%</span> за двойной заказ</div>
+						<p>При заказе двух проектов единовременно<br>(дом и баня/баня и беседка) — действует скидка от 3%.</p>
+						<div class="send-site-next-slide"></div>
+					</div>
+					<div class="send-app-item">
+						<div class="h3">Скидка от <span>3%</span> за двойной заказ</div>
+						<p>При заказе двух проектов единовременно<br>(дом и баня/баня и беседка) — действует скидка от 3%.</p>
+						<div class="send-site-next-slide"></div>
+					</div>
 				</div>
 				<div class="second-banner-btns">
-					<a href="#" class="check-projects-btn">Посмотреть проекты</a>
-					<a href="#" class="btn btn-lg btn-wide">отправить заявку</a>
+					<a href="#projects" class="check-projects-btn scroll-to">Посмотреть проекты</a>
+					<a href="#callback" class="btn btn-lg btn-wide open-popup">отправить заявку</a>
 				</div>
 			</div>
 
@@ -217,25 +231,40 @@
 				
 				<div class="col-md-4">
 					<div class="category-item small">
-						<a href="#" class="category-item-link"></a>
+						<a href="#project-images" class="category-item-link open-popup"></a>
 						<div class="category-item-img"><img src="img/house-3.jpg" alt=""></div>
 						<div class="category-item-title">Деревянные дома</div>
+						<div class="category-item-popup-images">
+							<img src="img/house-1.jpg" alt="">
+							<img src="img/house-1.jpg" alt="">
+							<img src="img/house-1.jpg" alt="">
+						</div>
 					</div>
 				</div>
 
 				<div class="col-md-4">
 					<div class="category-item small">
-						<a href="#" class="category-item-link"></a>
+						<a href="#project-images" class="category-item-link open-popup"></a>
 						<div class="category-item-img"><img src="img/house-3.jpg" alt=""></div>
 						<div class="category-item-title">Деревянные дома</div>
+						<div class="category-item-popup-images">
+							<img src="img/house-2.jpg" alt="">
+							<img src="img/house-2.jpg" alt="">
+							<img src="img/house-2.jpg" alt="">
+						</div>
 					</div>
 				</div>
 
 				<div class="col-md-4">
 					<div class="category-item small">
-						<a href="#" class="category-item-link"></a>
+						<a href="#project-images" class="category-item-link open-popup"></a>
 						<div class="category-item-img"><img src="img/house-3.jpg" alt=""></div>
 						<div class="category-item-title">Деревянные дома</div>
+						<div class="category-item-popup-images">
+							<img src="img/house-3.jpg" alt="">
+							<img src="img/house-3.jpg" alt="">
+							<img src="img/house-3.jpg" alt="">
+						</div>
 					</div>
 				</div>
 
@@ -474,7 +503,7 @@
 			<div class="consultation-block">
 				<p>Вам необходима консультация?<br>Произвести расчет или подобрать оптимальный вариант?</p>
 				<div class="h2">Наш менеджер с радостью поможет вам с этим!</div>
-				<a href="#" class="btn btn-lg btn-wide">Отправить заявку</a>
+				<a href="#callback" class="btn btn-lg btn-wide open-popup">Отправить заявку</a>
 			</div>
 
 		</div>
@@ -577,7 +606,7 @@
 		</div>
 	</section>
 
-	<section class="s-projects">
+	<section class="s-projects" id="projects">
 		<div class="container">
 			
 			<div class="section-title">
@@ -699,7 +728,137 @@
 		</div>
 	</section>
 
+	<section class="s-contacts s-contacts-bg">
+		
+		<div class="contacts">
+			<div class="container">
+				<div class="contacts-content">
+					<div class="h2">Контакты:</div>
+					<div class="contacts-info">Домовъ — строительство домов и бань под ключ.</div>
+					<div class="contacts-location">г. Казань, ул. Четаева, 33, офис 113</div>
+					<div class="contacts-numbers">
+						<div class="contacts-numbers-item">
+							<a href="tel:+79631200455" class="number-link">+7 (963) <span>120-04-55</span></a>
+						</div>
+						<div class="contacts-numbers-item">
+							<a href="tel:+79123332003" class="number-link">+7 (912) <span>333-20-03</span></a>
+						</div>
+					</div>
+					<div class="contacts-soc">
+						<nav class="soc-nav">
+							<a href="#" class="soc-nav-link"><span class="icon-vk"></span></a>
+							<a href="#" class="soc-nav-link"><span class="icon-facebook"></span></a>
+							<a href="#" class="soc-nav-link"><span class="icon-youtube"></span></a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="contacts-map">
+			<div id="map" class="map-container"></div>
+		</div>
+
+	</section>
+
+	<footer class="footer">
+		<div class="footer-top">
+			<div class="container">
+				<nav class="footer-menu">
+					<a href="#">Главная</a>
+					<a href="#">О компании</a>
+					<a href="#">Этапы строительства</a>
+					<a href="#">Расчет стоимости</a>
+					<a href="#">Контакты</a>
+				</nav>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				<div class="footer-row">
+					<div class="footer-left">
+						©Domov 2020
+					</div>
+					<div class="footer-right">
+						Сайт разработан в <a href="#">BIK.Agency</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="popup-wrapper" id="callback">
+		<div class="popup-flex">
+			<div class="popup-block">
+				<div class="popup-close">
+					<span class="icon-close"></span>
+				</div>
+				<div class="popup-content">
+					<div class="h3">Заказать звонок</div>
+					<p>Оставьте заявку и мы свяжемся с Вами в ближайшее время!</p>
+					<form class="callback-form">
+						<div class="form-group">
+							<input type="text" class="form-control is-invalid" placeholder="Ваше имя">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control phone-mask" placeholder="Ваш телефон">
+						</div>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-black">Заказать звонок</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="popup-bg"></div>
+		</div>
+	</div>
+
+	<div class="popup-wrapper" id="project-images">
+		<div class="popup-flex">
+			<div class="popup-block project-images-popup">
+				<div class="popup-close">
+					<span class="icon-close"></span>
+				</div>
+				<div class="popup-content">
+					<div class="project-images-popup-slider owl-carousel"></div>
+				</div>
+			</div>
+			<div class="popup-bg"></div>
+		</div>
+	</div>	
+
 	<script src="js/scripts.min.js"></script>
+
+	<script type="text/javascript">
+
+		ymaps.ready(init);
+
+		function init() {
+
+			let coord = [55.823818, 49.122781];
+
+			let myMap = new ymaps.Map("map", {
+				center: coord,
+				zoom: 15,
+				controls: [],
+				duration: 1000
+			}, {
+				suppressMapOpenBlock: true
+			});
+
+			let myCollection = new ymaps.GeoObjectCollection();
+
+			function filterApiData() {
+				myCollection.add(new ymaps.Placemark(coord));
+				myMap.geoObjects.add(myCollection);
+			}filterApiData();
+
+			myMap.behaviors.disable('scrollZoom');
+			myMap.controls.add('zoomControl');
+
+		}
+
+	</script>
 
 </body>
 </html>
